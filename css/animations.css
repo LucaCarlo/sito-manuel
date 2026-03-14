@@ -1,0 +1,242 @@
+/* ============================================
+   Manuel Decorazioni - Animations
+   ============================================ */
+
+/* --- Reveal Animations --- */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-up.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-up:nth-child(2) { transition-delay: 0.1s; }
+.reveal-up:nth-child(3) { transition-delay: 0.2s; }
+.reveal-up:nth-child(4) { transition-delay: 0.3s; }
+
+/* --- Magnetic Button Effect --- */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.2) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+/* --- Service Card Hover Glow --- */
+.servizio-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: var(--radius-lg);
+    padding: 1px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent), var(--color-accent-2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.servizio-card:hover::before {
+    opacity: 1;
+}
+
+.servizio-card.featured::before {
+    opacity: 0.5;
+}
+
+/* --- Project Card Image Zoom --- */
+.project-card .project-placeholder {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-placeholder {
+    transform: scale(1.08);
+}
+
+/* --- Text Gradient Animation --- */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.title-accent {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light), var(--color-primary));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease-in-out infinite;
+}
+
+/* --- Floating animation for decorative elements --- */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    75% { transform: translateY(5px) rotate(-1deg); }
+}
+
+/* --- Number Counter Pulse --- */
+@keyframes counterPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.stat-number.counting {
+    animation: counterPulse 0.1s ease;
+}
+
+/* --- Smooth Parallax --- */
+.hero-bg {
+    will-change: transform;
+}
+
+/* --- Filter Button Active Animation --- */
+.filter-btn.active {
+    animation: filterPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes filterPop {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* --- Testimonial Slide Animation --- */
+.testimonial-card {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* --- Form Focus Animation --- */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    transition: color var(--transition-fast);
+}
+
+.form-group:focus-within label {
+    color: var(--color-primary);
+}
+
+/* --- Step Timeline Progress --- */
+.processo-step .step-number {
+    transition: all var(--transition-base);
+}
+
+.processo-step:hover .step-number {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+/* --- Navbar link underline slide --- */
+.nav-link::after {
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* --- Smooth page transitions --- */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: var(--color-dark);
+    z-index: 10000;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.page-transition.active {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+/* --- Scroll Progress Bar --- */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    z-index: 10001;
+    transition: width 0.1s linear;
+}
+
+/* --- Image shimmer loading effect --- */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.project-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+/* --- CTA background floating circles --- */
+.cta-bg-pattern::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 169, 110, 0.1);
+    right: -50px;
+    top: -50px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.cta-bg-pattern::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    left: -30px;
+    bottom: -30px;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-up {
+        opacity: 1;
+        transform: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}

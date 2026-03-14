@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Decorazioni | Imbianchino & Decorazioni d'Arte</title>
+    <meta name="description" content="Manuel - Professionista in tinteggiatura, riparazione pareti e decorazioni artistiche Valpaint. Trasformiamo i tuoi spazi in opere d'arte.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="paint-roller">
+                <div class="roller-handle"></div>
+                <div class="roller-body"></div>
+                <div class="paint-trail"></div>
+            </div>
+            <p class="loader-text">Stiamo preparando qualcosa di bello...</p>
+        </div>
+    </div>
+
+    <!-- Cursor follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="8" width="20" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M25 15 L35 8 L35 32 L25 32Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <line x1="10" y1="14" x2="20" y2="14" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="10" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="10" y1="22" x2="17" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </span>
+                <div class="logo-text">
+                    <span class="logo-name">Manuel</span>
+                    <span class="logo-sub">Decorazioni d'Arte</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#servizi" class="nav-link">Servizi</a>
+                <a href="#progetti" class="nav-link">Progetti</a>
+                <a href="#processo" class="nav-link">Come Lavoro</a>
+                <a href="#testimonianze" class="nav-link">Recensioni</a>
+                <a href="#contatti" class="nav-link nav-cta">Contattami</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="paint-drips">
+                <div class="drip drip-1"></div>
+                <div class="drip drip-2"></div>
+                <div class="drip drip-3"></div>
+                <div class="drip drip-4"></div>
+                <div class="drip drip-5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                Disponibile per nuovi progetti
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line reveal-up">Trasformo le tue</span>
+                <span class="title-line title-accent reveal-up">pareti in opere</span>
+                <span class="title-line reveal-up">d'arte</span>
+            </h1>
+            <p class="hero-subtitle reveal-up">
+                Imbianchino professionista specializzato in decorazioni artistiche,
+                finiture Valpaint e restauro pareti. Ogni superficie racconta una storia.
+            </p>
+            <div class="hero-actions reveal-up">
+                <a href="#progetti" class="btn btn-primary">
+                    <span>Scopri i miei lavori</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contatti" class="btn btn-outline">
+                    <span>Preventivo gratuito</span>
+                </a>
+            </div>
+            <div class="hero-stats reveal-up">
+                <div class="stat">
+                    <span class="stat-number" data-count="150">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Progetti completati</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="12">0</span>
+                    <span class="stat-label">Anni di esperienza</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">Clienti soddisfatti</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scorri</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section class="servizi" id="servizi">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">I Miei Servizi</span>
+                <h2 class="section-title reveal-up">Ogni parete merita<br><em>la perfezione</em></h2>
+                <p class="section-desc reveal-up">
+                    Dal semplice ritocco alla decorazione artistica, offro soluzioni complete
+                    per trasformare ogni ambiente della tua casa.
+                </p>
+            </div>
+            <div class="servizi-grid">
+                <!-- Servizio 1 -->
+                <div class="servizio-card reveal-up" data-service="pittura">
+                    <div class="servizio-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="20" width="32" height="36" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M40 28L56 16V56H40" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="24" cy="38" r="8" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+                        </svg>
+                    </div>
+                    <div class="servizio-number">01</div>
+                    <h3 class="servizio-title">Tinteggiatura Professionale</h3>
+                    <p class="servizio-desc">
+                        Pittura interna ed esterna con prodotti di alta qualita.
+                        Preparazione accurata delle superfici, primer specifici e
+                        finiture impeccabili che durano nel tempo.
+                    </p>
+                    <ul class="servizio-features">
+                        <li>Pittura interna ed esterna</li>
+                        <li>Trattamenti antimuffa</li>
+                        <li>Finiture opache e satinate</li>
+                        <li>Consulenza colore gratuita</li>
+                    </ul>
+                    <a href="#contatti" class="servizio-link">
+                        Richiedi preventivo
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Servizio 2 -->
+                <div class="servizio-card featured reveal-up" data-service="decorazioni">
+                    <div class="servizio-badge">Il piu richiesto</div>
+                    <div class="servizio-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 8C18 8 8 18 8 32s10 24 24 24 24-10 24-24" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M32 8c8 4 16 14 16 24" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="20" cy="28" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="20" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="32" r="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="28" cy="40" r="3.5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="servizio-number">02</div>
+                    <h3 class="servizio-title">Decorazioni Artistiche</h3>
+                    <p class="servizio-desc">
+                        Finiture decorative di pregio con tecniche Valpaint, stucco veneziano,
+                        effetto marmo, spatolato e molto altro. Creo atmosfere uniche
+                        che trasformano ogni ambiente.
+                    </p>
+                    <ul class="servizio-features">
+                        <li>Tecniche Valpaint certificate</li>
+                        <li>Stucco veneziano</li>
+                        <li>Effetto marmorino</li>
+                        <li>Spatolato e velature</li>
+                    </ul>
+                    <a href="#contatti" class="servizio-link">
+                        Richiedi preventivo
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Servizio 3 -->
+                <div class="servizio-card reveal-up" data-service="riparazioni">
+                    <div class="servizio-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="12" y="12" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M24 24l16 16M40 24L24 40" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                            <path d="M32 20v24M20 32h24" stroke="currentColor" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="servizio-number">03</div>
+                    <h3 class="servizio-title">Riparazione Pareti</h3>
+                    <p class="servizio-desc">
+                        Riparo buchi, crepe, distacchi d'intonaco e danni da umidita.
+                        Ripristino perfetto della superficie con stuccatura professionale
+                        e finitura invisibile.
+                    </p>
+                    <ul class="servizio-features">
+                        <li>Stuccatura buchi e crepe</li>
+                        <li>Ripristino intonaco</li>
+                        <li>Trattamento umidita</li>
+                        <li>Cartongesso e rasatura</li>
+                    </ul>
+                    <a href="#contatti" class="servizio-link">
+                        Richiedi preventivo
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progetti Section -->
+    <section class="progetti" id="progetti">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Portfolio</span>
+                <h2 class="section-title reveal-up">I miei lavori<br><em>parlano da soli</em></h2>
+                <p class="section-desc reveal-up">
+                    Ogni progetto e una storia di trasformazione. Clicca per scoprire
+                    il prima, il durante e il dopo di ogni lavoro.
+                </p>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="project-filters reveal-up">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="decorazioni">Decorazioni</button>
+                <button class="filter-btn" data-filter="pittura">Tinteggiatura</button>
+                <button class="filter-btn" data-filter="riparazioni">Riparazioni</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="progetto-villa-moderna.html" class="project-card reveal-up" data-category="decorazioni">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #c9a96e 0%, #8b6914 50%, #d4b896 100%);">
+                            <div class="placeholder-pattern pattern-venetian"></div>
+                            <div class="placeholder-text">Stucco Veneziano</div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Scopri il progetto</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Decorazione Artistica</span>
+                        <h3 class="project-title">Villa Moderna - Stucco Veneziano</h3>
+                        <p class="project-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Milano, Lombardia
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="progetto-appartamento-elegante.html" class="project-card reveal-up" data-category="decorazioni">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #e8dcc8 0%, #b8a088 50%, #d4c4a8 100%);">
+                            <div class="placeholder-pattern pattern-spatula"></div>
+                            <div class="placeholder-text">Spatolato</div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Scopri il progetto</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Decorazione Artistica</span>
+                        <h3 class="project-title">Appartamento Elegante - Spatolato</h3>
+                        <p class="project-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Roma, Lazio
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="progetto-loft-industriale.html" class="project-card large reveal-up" data-category="pittura">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #95a5a6 100%);">
+                            <div class="placeholder-pattern pattern-modern"></div>
+                            <div class="placeholder-text">Design Moderno</div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Scopri il progetto</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Tinteggiatura</span>
+                        <h3 class="project-title">Loft Industriale - Color Block</h3>
+                        <p class="project-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Torino, Piemonte
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="progetto-ristorante-lusso.html" class="project-card reveal-up" data-category="decorazioni">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                            <div class="placeholder-pattern pattern-marble"></div>
+                            <div class="placeholder-text">Effetto Marmo</div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Scopri il progetto</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Decorazione Artistica</span>
+                        <h3 class="project-title">Ristorante di Lusso - Marmorino</h3>
+                        <p class="project-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Firenze, Toscana
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 5 -->
+                <a href="progetto-casa-famiglia.html" class="project-card reveal-up" data-category="riparazioni">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f5f0e8 0%, #e8dcc8 50%, #d4c8b0 100%);">
+                            <div class="placeholder-pattern pattern-repair"></div>
+                            <div class="placeholder-text">Restauro Completo</div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Scopri il progetto</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Riparazione</span>
+                        <h3 class="project-title">Casa di Famiglia - Restauro Pareti</h3>
+                        <p class="project-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Bologna, Emilia-Romagna
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 6 -->
+                <a href="progetto-hotel-boutique.html" class="project-card reveal-up" data-category="decorazioni">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);">
+                            <div class="placeholder-pattern pattern-valpaint"></div>
+                            <div class="placeholder-text">Valpaint</div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Scopri il progetto</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Decorazione Artistica</span>
+                        <h3 class="project-title">Hotel Boutique - Valpaint Klondike</h3>
+                        <p class="project-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Venezia, Veneto
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo Section -->
+    <section class="processo" id="processo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Il Mio Metodo</span>
+                <h2 class="section-title reveal-up">Come lavoro<br><em>passo dopo passo</em></h2>
+            </div>
+            <div class="processo-timeline">
+                <div class="timeline-line"></div>
+                <div class="processo-step reveal-up">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="24" cy="24" r="20"/>
+                                <path d="M24 14v10l7 7"/>
+                            </svg>
+                        </div>
+                        <h3>Sopralluogo Gratuito</h3>
+                        <p>Vengo a casa tua per valutare lo stato delle pareti, ascoltare le tue idee e proporti le soluzioni migliori. Tutto senza impegno.</p>
+                    </div>
+                </div>
+                <div class="processo-step reveal-up">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="8" y="8" width="32" height="32" rx="4"/>
+                                <path d="M16 24h16M24 16v16"/>
+                            </svg>
+                        </div>
+                        <h3>Preventivo Dettagliato</h3>
+                        <p>Ti invio un preventivo chiaro e trasparente, con tempi e costi definiti. Nessuna sorpresa, solo chiarezza.</p>
+                    </div>
+                </div>
+                <div class="processo-step reveal-up">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 36V16l12-8 12 8v20"/>
+                                <rect x="18" y="24" width="12" height="12"/>
+                            </svg>
+                        </div>
+                        <h3>Preparazione Accurata</h3>
+                        <p>Proteggo mobili e pavimenti, preparo le superfici con cura. La preparazione e il segreto di un risultato perfetto.</p>
+                    </div>
+                </div>
+                <div class="processo-step reveal-up">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 40L20 12l8 16 6-8 6 20"/>
+                                <circle cx="36" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <h3>Realizzazione</h3>
+                        <p>Eseguo il lavoro con passione e precisione, utilizzando solo materiali di prima qualita. Ti aggiorno passo dopo passo.</p>
+                    </div>
+                </div>
+                <div class="processo-step reveal-up">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="24" cy="24" r="20"/>
+                                <path d="M16 24l6 6 12-12"/>
+                            </svg>
+                        </div>
+                        <h3>Consegna Perfetta</h3>
+                        <p>Pulizia finale, verifica insieme a te e garanzia sul lavoro. La tua soddisfazione e la mia migliore pubblicita.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Risultati</span>
+                <h2 class="section-title reveal-up">Prima e dopo<br><em>la trasformazione</em></h2>
+            </div>
+            <div class="ba-showcase">
+                <div class="ba-card reveal-up">
+                    <div class="ba-slider" data-ba="1">
+                        <div class="ba-before">
+                            <div class="ba-placeholder-before" style="background: linear-gradient(135deg, #d5d0c4 0%, #b8b0a0 100%);">
+                                <div class="ba-damage"></div>
+                                <span>PRIMA</span>
+                            </div>
+                        </div>
+                        <div class="ba-after">
+                            <div class="ba-placeholder-after" style="background: linear-gradient(135deg, #c9a96e 0%, #d4b896 100%);">
+                                <div class="ba-shine"></div>
+                                <span>DOPO</span>
+                            </div>
+                        </div>
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/>
+                                </svg>
+                            </div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <p class="ba-caption">Stucco veneziano su parete danneggiata - Soggiorno</p>
+                </div>
+                <div class="ba-card reveal-up">
+                    <div class="ba-slider" data-ba="2">
+                        <div class="ba-before">
+                            <div class="ba-placeholder-before" style="background: linear-gradient(135deg, #e8e0d0 0%, #c8c0b0 100%);">
+                                <div class="ba-damage damage-cracks"></div>
+                                <span>PRIMA</span>
+                            </div>
+                        </div>
+                        <div class="ba-after">
+                            <div class="ba-placeholder-after" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <div class="ba-shine"></div>
+                                <span>DOPO</span>
+                            </div>
+                        </div>
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/>
+                                </svg>
+                            </div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <p class="ba-caption">Effetto Valpaint Klondike - Camera da letto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonianze Section -->
+    <section class="testimonianze" id="testimonianze">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Recensioni</span>
+                <h2 class="section-title reveal-up">Cosa dicono<br><em>i miei clienti</em></h2>
+            </div>
+            <div class="testimonial-carousel reveal-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Manuel ha trasformato completamente il nostro soggiorno con uno stucco veneziano straordinario.
+                            La cura nei dettagli e la professionalita sono state impeccabili. Ogni ospite rimane a bocca aperta!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <span>MR</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Marco Rossi</strong>
+                                <span>Villa privata, Milano</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Avevamo pareti piene di buchi e crepe dopo i lavori dell'idraulico. Manuel le ha ripristinate
+                            in modo perfetto, non si vede nemmeno dove fossero i danni. Prezzo onesto e lavoro eccellente."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                                <span>LB</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Laura Bianchi</strong>
+                                <span>Appartamento, Roma</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Per il nostro ristorante volevamo qualcosa di speciale. Manuel ha realizzato un effetto marmorino
+                            che sembra uscito da un palazzo storico. I clienti ci chiedono sempre chi ha fatto le pareti!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                                <span>GV</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Giuseppe Verdi</strong>
+                                <span>Ristorante, Firenze</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 6.36H19l-5.3 4.14 1.96 6.5L10 13.77 4.34 18l1.96-6.5L1 7.36h6.61z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Ho affidato a Manuel la tinteggiatura di tutto il mio appartamento nuovo. Colori perfetti,
+                            pulizia durante i lavori e consegna nei tempi. Lo consiglio a tutti senza esitazione."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                                <span>AF</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Anna Ferrari</strong>
+                                <span>Appartamento, Torino</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev" id="prevTestimonial" aria-label="Precedente">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn next" id="nextTestimonial" aria-label="Successivo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card reveal-up">
+                <div class="cta-bg-pattern"></div>
+                <h2 class="cta-title">Pronto a trasformare<br>i tuoi spazi?</h2>
+                <p class="cta-text">Contattami per un sopralluogo gratuito e senza impegno. Insieme troveremo la soluzione perfetta per le tue pareti.</p>
+                <div class="cta-actions">
+                    <a href="tel:+39333XXXXXXX" class="btn btn-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>Chiamami</span>
+                    </a>
+                    <a href="https://wa.me/39333XXXXXXX" class="btn btn-outline-white" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.172 1.607 5.99L.057 23.64a.5.5 0 00.602.602l5.71-1.57A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.38-1.567l-.386-.232-3.39.932.916-3.342-.25-.396A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti Section -->
+    <section class="contatti" id="contatti">
+        <div class="container">
+            <div class="contatti-grid">
+                <div class="contatti-info reveal-up">
+                    <span class="section-tag">Contatti</span>
+                    <h2 class="section-title">Parliamo del<br><em>tuo progetto</em></h2>
+                    <p class="contatti-desc">
+                        Hai un'idea per le tue pareti? Contattami senza impegno per un sopralluogo
+                        e un preventivo gratuito. Sono sempre disponibile per una consulenza.
+                    </p>
+                    <div class="contatti-details">
+                        <div class="contatto-item">
+                            <div class="contatto-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Telefono</strong>
+                                <a href="tel:+39333XXXXXXX">+39 333 XXX XXXX</a>
+                            </div>
+                        </div>
+                        <div class="contatto-item">
+                            <div class="contatto-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@manuelDecorazioni.it">info@manueldecorazioni.it</a>
+                            </div>
+                        </div>
+                        <div class="contatto-item">
+                            <div class="contatto-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <strong>Zona operativa</strong>
+                                <span>Milano e provincia, Lombardia</span>
+                            </div>
+                        </div>
+                        <div class="contatto-item">
+                            <div class="contatto-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div>
+                                <strong>Disponibilita</strong>
+                                <span>Lun - Sab: 7:00 - 19:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contatti-form-wrap reveal-up">
+                    <form class="contatti-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" id="name" name="name" required placeholder="Il tuo nome">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="La tua email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefono</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Il tuo numero">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Servizio richiesto</label>
+                            <select id="service" name="service">
+                                <option value="">Seleziona un servizio</option>
+                                <option value="pittura">Tinteggiatura</option>
+                                <option value="decorazioni">Decorazioni Artistiche</option>
+                                <option value="riparazioni">Riparazione Pareti</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Descrivi il tuo progetto</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Raccontami cosa hai in mente..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Invia richiesta</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+                        </button>
+                        <p class="form-note">Rispondo entro 24 ore. I tuoi dati sono al sicuro.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="8" width="20" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M25 15 L35 8 L35 32 L25 32Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <line x1="10" y1="14" x2="20" y2="14" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="10" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="10" y1="22" x2="17" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </span>
+                        <div class="logo-text">
+                            <span class="logo-name">Manuel</span>
+                            <span class="logo-sub">Decorazioni d'Arte</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Trasformo le tue pareti in opere d'arte dal 2012.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Servizi</h4>
+                        <a href="#servizi">Tinteggiatura</a>
+                        <a href="#servizi">Decorazioni Artistiche</a>
+                        <a href="#servizi">Riparazione Pareti</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Link Utili</h4>
+                        <a href="#progetti">Portfolio</a>
+                        <a href="#processo">Come Lavoro</a>
+                        <a href="#testimonianze">Recensioni</a>
+                        <a href="#contatti">Contatti</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Manuel Decorazioni. Tutti i diritti riservati. P.IVA: XXXXXXXXXXX</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
