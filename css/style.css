@@ -239,14 +239,14 @@ input, select, textarea {
 }
 
 .logo-img {
-    height: 55px;
+    height: 70px;
     width: auto;
     object-fit: contain;
     transition: height var(--transition-base);
 }
 
 .navbar.scrolled .logo-img {
-    height: 45px;
+    height: 55px;
 }
 
 .nav-links {
@@ -1774,11 +1774,11 @@ input, select, textarea {
     }
 
     .logo-img {
-        height: 48px;
+        height: 58px;
     }
 
     .navbar.scrolled .logo-img {
-        height: 40px;
+        height: 46px;
     }
 }
 
