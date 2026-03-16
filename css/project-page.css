@@ -474,4 +474,149 @@
         flex-direction: column;
         gap: 8px;
     }
+
+    .story-video-large video {
+        max-height: 400px;
+    }
+}
+
+/* --- Real Images in Story --- */
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    min-height: 300px;
+    max-height: 500px;
+}
+
+.story-image a {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-image a:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item a:hover {
+    transform: scale(1.03);
+}
+
+/* --- Video --- */
+.story-video {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.story-video video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.story-video-large video {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+.video-caption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--color-gray-500, #888);
+    font-style: italic;
+}
+
+/* --- Before/After Label --- */
+.ba-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 5;
+}
+
+.ba-after .ba-label {
+    left: auto;
+    right: 20px;
+}
+
+/* --- Lightbox --- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
 }

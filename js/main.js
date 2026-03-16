@@ -410,4 +410,31 @@ document.addEventListener('DOMContentLoaded', () => {
         storySections.forEach(section => storyObserver.observe(section));
     }
 
+    // --- Lightbox ---
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    if (lightbox && lightboxImg) {
+        document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxImg.src = trigger.getAttribute('href');
+                lightboxImg.alt = trigger.querySelector('img')?.alt || '';
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            setTimeout(() => { lightboxImg.src = ''; }, 300);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+                setTimeout(() => { lightboxImg.src = ''; }, 300);
+            }
+        });
+    }
+
 });
