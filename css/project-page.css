@@ -2,6 +2,11 @@
    Manuel Decorazioni - Project Page Styles
    ============================================ */
 
+/* --- Prevent horizontal overflow --- */
+html, body {
+    overflow-x: hidden;
+}
+
 /* --- Project Hero --- */
 .project-hero {
     position: relative;
@@ -179,6 +184,7 @@
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 var(--container-padding);
+    overflow: hidden;
 }
 
 .story-grid {
@@ -188,12 +194,12 @@
     align-items: center;
 }
 
-.story-grid.reverse {
-    direction: rtl;
+.story-grid.reverse .story-image {
+    order: 2;
 }
 
-.story-grid.reverse > * {
-    direction: ltr;
+.story-grid.reverse .story-text {
+    order: 1;
 }
 
 .story-image {
@@ -443,8 +449,9 @@
         gap: 32px;
     }
 
-    .story-grid.reverse {
-        direction: ltr;
+    .story-grid.reverse .story-image,
+    .story-grid.reverse .story-text {
+        order: unset;
     }
 
     .story-gallery {
@@ -537,6 +544,8 @@
     max-width: 800px;
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
 }
 
 .story-video-large video {
