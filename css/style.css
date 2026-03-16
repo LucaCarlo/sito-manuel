@@ -212,12 +212,12 @@ input, select, textarea {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 12px 0;
     transition: all var(--transition-base);
 }
 
 .navbar.scrolled {
-    padding: 12px 0;
+    padding: 8px 0;
     background: rgba(13, 13, 13, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -236,34 +236,17 @@ input, select, textarea {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: var(--color-white);
 }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    color: var(--color-primary);
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: height var(--transition-base);
 }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-name {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.logo-sub {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--color-primary);
-    font-weight: 500;
+.navbar.scrolled .logo-img {
+    height: 48px;
 }
 
 .nav-links {
@@ -1788,6 +1771,14 @@ input, select, textarea {
 
     .contatti-form-wrap {
         padding: 24px;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .navbar.scrolled .logo-img {
+        height: 42px;
     }
 }
 
