@@ -2,11 +2,6 @@
    Manuel Decorazioni - Project Page Styles
    ============================================ */
 
-/* --- Prevent horizontal overflow --- */
-html, body {
-    overflow-x: hidden;
-}
-
 /* --- Project Hero --- */
 .project-hero {
     position: relative;

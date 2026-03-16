@@ -324,6 +324,7 @@ input, select, textarea {
     display: none;
     flex-direction: column;
     gap: 5px;
+    position: relative;
     padding: 8px;
     z-index: 1001;
 }
@@ -1682,18 +1683,27 @@ input, select, textarea {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        z-index: 10000;
     }
 
     .nav-links {
         position: fixed;
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
         background: rgba(13, 13, 13, 0.98);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 24px;
         transform: translateX(100%);
         transition: transform var(--transition-base);
+        z-index: 9999;
     }
 
     .nav-links.open {
