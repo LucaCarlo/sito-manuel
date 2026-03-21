@@ -239,14 +239,14 @@ input, select, textarea {
 }
 
 .logo-img {
-    height: 70px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     transition: height var(--transition-base);
 }
 
 .navbar.scrolled .logo-img {
-    height: 55px;
+    height: 70px;
 }
 
 .nav-links {
@@ -1774,17 +1774,25 @@ input, select, textarea {
     }
 
     .logo-img {
-        height: 58px;
+        height: 80px;
     }
 
     .navbar.scrolled .logo-img {
-        height: 46px;
+        height: 60px;
     }
 }
 
 @media (max-width: 480px) {
     :root {
         --container-padding: 16px;
+    }
+
+    .logo-img {
+        height: 65px;
+    }
+
+    .navbar.scrolled .logo-img {
+        height: 50px;
     }
 
     .hero {

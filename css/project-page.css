@@ -260,12 +260,9 @@
     border-radius: var(--radius-md);
     overflow: hidden;
     cursor: pointer;
-    transition: all var(--transition-base);
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
     z-index: 2;
 }
 
@@ -435,6 +432,14 @@
         min-height: 50vh;
     }
 
+    .story-section {
+        padding: 60px 0;
+    }
+
+    .story-header {
+        margin-bottom: 36px;
+    }
+
     .story-grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -447,17 +452,18 @@
 
     .story-gallery {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .materials-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: none;
     }
 
     .info-bar-stats {
         gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .info-bar-content {
@@ -474,8 +480,79 @@
         gap: 8px;
     }
 
+    /* Video row stacks on mobile */
+    .story-video-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .story-video-row.reverse .story-video-player,
+    .story-video-row.reverse .story-video-info {
+        order: unset;
+    }
+
+    .story-video-info {
+        text-align: center;
+    }
+
+    .story-video-info .video-icon {
+        justify-content: center;
+    }
+
     .story-video-large video {
         max-height: 400px;
+    }
+
+    .story-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .story-image img {
+        min-height: 220px;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-section {
+        padding: 40px 0;
+    }
+
+    .story-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-hero-content {
+        padding: 60px var(--container-padding, 16px) 40px;
+    }
+
+    .project-hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .info-bar-stats {
+        gap: 12px;
+    }
+
+    .info-stat-value {
+        font-size: 1.1rem;
+    }
+
+    .project-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-cta .btn {
+        display: block;
+        margin: 8px 0;
     }
 }
 
@@ -488,6 +565,7 @@
     display: block;
     min-height: 300px;
     max-height: 500px;
+    transition: transform 0.4s ease;
 }
 
 .story-image a {
@@ -495,12 +573,15 @@
     border-radius: 16px;
     overflow: hidden;
     cursor: zoom-in;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .story-image a:hover {
-    transform: scale(1.02);
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.story-image a:hover img {
+    transform: scale(1.03);
 }
 
 .gallery-item img {
@@ -510,6 +591,7 @@
     border-radius: 12px;
     display: block;
     aspect-ratio: 4/3;
+    transition: transform 0.4s ease;
 }
 
 .gallery-item a {
@@ -517,14 +599,67 @@
     border-radius: 12px;
     overflow: hidden;
     cursor: zoom-in;
-    transition: transform 0.3s ease;
 }
 
-.gallery-item a:hover {
-    transform: scale(1.03);
+.gallery-item:hover img {
+    transform: scale(1.06);
 }
 
-/* --- Video --- */
+/* --- Video Side-by-Side Layout --- */
+.story-video-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.story-video-row.reverse .story-video-player {
+    order: 2;
+}
+
+.story-video-row.reverse .story-video-info {
+    order: 1;
+}
+
+.story-video-player video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.story-video-info h3 {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark, #0d0d0d);
+    margin-bottom: 12px;
+}
+
+.story-video-info p {
+    color: var(--color-gray-600, #666);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.story-video-info .video-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary, #c9a96e);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.story-video-info .video-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Legacy full-width video (for large final video) */
 .story-video {
     margin-top: 40px;
     text-align: center;
