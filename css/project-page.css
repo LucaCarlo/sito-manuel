@@ -445,6 +445,10 @@
         min-height: 50vh;
     }
 
+    .project-hero-content {
+        padding: 150px var(--container-padding, 20px) 40px;
+    }
+
     .story-section {
         padding: 60px 0;
     }
@@ -544,7 +548,7 @@
     }
 
     .project-hero-content {
-        padding: 120px var(--container-padding, 16px) 40px;
+        padding: 160px var(--container-padding, 16px) 40px;
     }
 
     .project-hero-title {
