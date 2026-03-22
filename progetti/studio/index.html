@@ -58,7 +58,7 @@
                 </span>
                 <span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    2024
+                    2026
                 </span>
                 <span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -389,8 +389,8 @@
 
             <!-- Video rasatura -->
             <div class="story-video-row reverse reveal-up">
-                <div class="story-video-player video-contained">
-                    <video controls preload="metadata" poster="../../images/studio/lavoro-6-med.jpg">
+                <div class="story-video-player">
+                    <video controls preload="metadata" poster="../../images/studio/lavoro-6-med.jpg" style="max-height: 500px; object-fit: cover;" onfullscreenchange="if(document.fullscreenElement){this.style.maxHeight='none';this.style.objectFit='contain';}else{this.style.maxHeight='500px';this.style.objectFit='cover';}">
                         <source src="../../images/studio/lavoro-10.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -435,8 +435,8 @@
             </div>
             <div class="story-grid reverse">
                 <div class="story-image reveal-up">
-                    <a href="../../images/studio/parete-spianata-lg.jpg" class="lightbox-trigger">
-                        <img src="../../images/studio/parete-spianata-lg.jpg" alt="Manuel applica la finitura Valpaint Setavel sulla parete" loading="lazy">
+                    <a href="../../images/studio/parete-nera.jpeg" class="lightbox-trigger">
+                        <img src="../../images/studio/parete-nera.jpeg" alt="Parete con finitura Valpaint Setavel - effetto materico" loading="lazy">
                     </a>
                 </div>
                 <div class="story-text reveal-up">
@@ -459,6 +459,28 @@
                         Non c'e margine d'errore: ogni segno rimane e diventa parte
                         della decorazione. E qui che l'esperienza fa la differenza.
                     </p>
+                </div>
+            </div>
+
+            <!-- Video Valpaint -->
+            <div class="story-video-row reveal-up">
+                <div class="story-video-player">
+                    <video controls preload="metadata" poster="../../images/studio/parete-nera.jpeg" style="max-height: 500px; object-fit: cover;" onfullscreenchange="if(document.fullscreenElement){this.style.maxHeight='none';this.style.objectFit='contain';}else{this.style.maxHeight='500px';this.style.objectFit='cover';}">
+                        <source src="../../images/studio/parete-nera-2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="story-video-info">
+                    <h3>L'applicazione del Valpaint</h3>
+                    <p>
+                        Guarda da vicino come il Setavel prende vita sulla parete.
+                        Ogni movimento della spatola crea texture e profondita,
+                        trasformando una superficie liscia in un'opera d'arte
+                        materica che gioca con la luce.
+                    </p>
+                    <div class="video-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Premi play per vedere la tecnica
+                    </div>
                 </div>
             </div>
 
@@ -505,12 +527,12 @@
             <div class="story-ba reveal-up">
                 <div class="ba-slider" data-ba="studio-1">
                     <div class="ba-before">
-                        <img src="../../images/studio/parete-pre-lavoro-lg.jpg" alt="PRIMA - Studio con muffa e umidita" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-                        <span class="ba-label">PRIMA</span>
-                    </div>
-                    <div class="ba-after">
                         <img src="../../images/studio/lavoro-12-lg.jpg" alt="DOPO - Studio restaurato completamente" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
                         <span class="ba-label">DOPO</span>
+                    </div>
+                    <div class="ba-after">
+                        <img src="../../images/studio/parete-pre-lavoro-lg.jpg" alt="PRIMA - Studio con muffa e umidita" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+                        <span class="ba-label">PRIMA</span>
                     </div>
                     <div class="ba-handle">
                         <div class="ba-handle-line"></div>
