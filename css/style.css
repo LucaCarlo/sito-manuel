@@ -245,18 +245,6 @@ input, select, textarea {
     transition: all var(--transition-base);
 }
 
-.logo-scrolled {
-    display: none;
-}
-
-.navbar.scrolled .logo-default {
-    display: none;
-}
-
-.navbar.scrolled .logo-scrolled {
-    display: block;
-}
-
 .navbar.scrolled .logo-img {
     height: 90px;
 }
@@ -1576,10 +1564,10 @@ input, select, textarea {
 }
 
 .footer-logo-img {
-    height: 80px;
+    height: 160px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .footer-tagline {
@@ -1728,13 +1716,18 @@ input, select, textarea {
 
     .hero-stats {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 20px;
+        text-align: center;
     }
 
     .stat-divider {
         width: 40px;
         height: 1px;
+    }
+
+    .footer-logo-img {
+        height: 120px;
     }
 
     .projects-grid {
@@ -1816,11 +1809,20 @@ input, select, textarea {
     }
 
     .hero {
-        padding: 100px 0 60px;
+        padding: 100px 0 100px;
+    }
+
+    .hero-content {
+        text-align: center;
     }
 
     .hero-actions {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-badge {
+        justify-content: center;
     }
 
     .btn {
