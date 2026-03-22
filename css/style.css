@@ -239,14 +239,26 @@ input, select, textarea {
 }
 
 .logo-img {
-    height: 100px;
+    height: 140px;
     width: auto;
     object-fit: contain;
-    transition: height var(--transition-base);
+    transition: all var(--transition-base);
+}
+
+.logo-scrolled {
+    display: none;
+}
+
+.navbar.scrolled .logo-default {
+    display: none;
+}
+
+.navbar.scrolled .logo-scrolled {
+    display: block;
 }
 
 .navbar.scrolled .logo-img {
-    height: 70px;
+    height: 90px;
 }
 
 .nav-links {
@@ -339,7 +351,7 @@ input, select, textarea {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 0 80px;
+    padding: 120px 0 120px;
     overflow: hidden;
 }
 
@@ -582,7 +594,7 @@ input, select, textarea {
 /* --- Scroll Indicator --- */
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -593,6 +605,7 @@ input, select, textarea {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    z-index: 3;
 }
 
 .scroll-line {
@@ -1562,6 +1575,13 @@ input, select, textarea {
     max-width: 300px;
 }
 
+.footer-logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
 .footer-tagline {
     color: rgba(255,255,255,0.5);
     font-size: 0.9rem;
@@ -1774,11 +1794,11 @@ input, select, textarea {
     }
 
     .logo-img {
-        height: 80px;
+        height: 110px;
     }
 
     .navbar.scrolled .logo-img {
-        height: 60px;
+        height: 75px;
     }
 }
 
@@ -1788,11 +1808,11 @@ input, select, textarea {
     }
 
     .logo-img {
-        height: 65px;
+        height: 85px;
     }
 
     .navbar.scrolled .logo-img {
-        height: 50px;
+        height: 60px;
     }
 
     .hero {
