@@ -583,31 +583,32 @@ input, select, textarea {
 .hero-scroll-indicator {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: var(--container-padding);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
     color: rgba(255,255,255,0.4);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
     z-index: 3;
 }
 
-.scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--color-primary), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
+@media (min-width: 768px) {
+    .hero-scroll-indicator {
+        right: calc((100vw - var(--container-max)) / 2);
+    }
 }
 
-@keyframes scrollLine {
-    0% { transform: scaleY(0); transform-origin: top; }
-    50% { transform: scaleY(1); transform-origin: top; }
-    51% { transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; }
+.mouse-icon {
+    width: 20px;
+    height: 34px;
+}
+
+.mouse-wheel {
+    animation: mouseScroll 2s ease-in-out infinite;
+}
+
+@keyframes mouseScroll {
+    0% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Section Styles --- */
@@ -682,6 +683,8 @@ input, select, textarea {
     overflow: hidden;
     transition: all var(--transition-slow);
     border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
 }
 
 .servizio-card:hover {
@@ -753,6 +756,7 @@ input, select, textarea {
 .servizio-features {
     list-style: none;
     margin-bottom: 24px;
+    flex-grow: 1;
 }
 
 .servizio-features li {
