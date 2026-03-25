@@ -711,6 +711,7 @@ input, select, textarea {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    pointer-events: none;
 }
 
 .servizio-icon {
@@ -729,6 +730,7 @@ input, select, textarea {
     top: 20px;
     right: 24px;
     line-height: 1;
+    pointer-events: none;
 }
 
 .featured .servizio-number {
@@ -788,11 +790,14 @@ input, select, textarea {
     color: var(--color-primary);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: gap var(--transition-base);
+    transition: gap var(--transition-base), background var(--transition-base);
     margin-top: auto;
     cursor: pointer;
     position: relative;
-    z-index: 2;
+    z-index: 10;
+    padding: 10px 18px;
+    border: 1.5px solid var(--color-primary);
+    border-radius: var(--radius-full);
 }
 
 .servizio-link svg {
@@ -802,6 +807,8 @@ input, select, textarea {
 
 .servizio-link:hover {
     gap: 14px;
+    background: var(--color-primary);
+    color: var(--color-dark);
 }
 
 /* --- Progetti Section --- */
