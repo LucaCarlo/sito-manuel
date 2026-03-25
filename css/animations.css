@@ -52,6 +52,7 @@
     mask-composite: exclude;
     opacity: 0;
     transition: opacity var(--transition-slow);
+    pointer-events: none;
 }
 
 .servizio-card:hover::before {

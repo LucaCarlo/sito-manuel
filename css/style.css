@@ -791,6 +791,8 @@ input, select, textarea {
     transition: gap var(--transition-base);
     margin-top: auto;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
 .servizio-link svg {
