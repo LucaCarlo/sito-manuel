@@ -789,6 +789,8 @@ input, select, textarea {
     font-weight: 600;
     font-size: 0.9rem;
     transition: gap var(--transition-base);
+    margin-top: auto;
+    cursor: pointer;
 }
 
 .servizio-link svg {
